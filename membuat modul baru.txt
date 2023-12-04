@@ -1,0 +1,26 @@
+Untuk membuat modul baru
+
+buatkan model baru
+php artisan make:migration create_products_table
+
+edit file migration
+
+dibagian up, sebagai proses rancang tabel di skrip model
+
+public function up(): void
+    {
+        Schema::create('news', function (Blueprint $table) {
+            $table->id();
+	.....
+            $table->timestamps();
+        });
+    }
+
+
+3. jalankan migrasi
+php artisan migrate
+
+
+
+4. buatkan view  (blade)
+index, create dan edit
